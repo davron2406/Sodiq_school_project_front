@@ -103,7 +103,7 @@
     methods: {
    
         async bookMeeting(){
-          const response = await axios.post('http://localhost:8080/api/meeting', this.meeting, {
+          const response = await axios.post('https://sodiq-school-project.onrender.com/api/meeting', this.meeting, {
             headers:{
               'Authorization':  'Bearer ' + localStorage.getItem('token'),
             },
