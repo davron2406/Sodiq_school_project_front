@@ -147,7 +147,6 @@
 
         closePopup(){
             this.isPopupOpen = false
-
             if(this.backgroundColor === "green"){
             this.$emit('close')
           }

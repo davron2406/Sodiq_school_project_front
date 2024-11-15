@@ -30,7 +30,7 @@
 
     <button @click="createMeeting">Book Meeting</button>
 
-    <BookMeeting v-if="isModalOpen"  @close="createMeeting"></BookMeeting>
+    <BookMeeting v-if="isModalOpen"  @close="closeModal"></BookMeeting>
 
 </template>
 
@@ -60,14 +60,22 @@
 
         methods:{
             createMeeting(){
-                console.log("creating is working")
+                if(this.isModalOpen){
+                    this.isModalOpen = false
+                }else{
+                    this.isModalOpen = true;
+                }
+               
+            },
+
+            closeModal(){
                 if(this.isModalOpen){
                     this.isModalOpen = false
                 }else{
                     this.isModalOpen = true;
                 }
 
-                console.log(this.isModalOpen)
+                this.getMeetings()
             },
 
             async getMeetings(){
