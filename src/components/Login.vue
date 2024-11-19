@@ -41,7 +41,7 @@
         methods:{
     
             async login(){
-              const response = await axios.post("https://sodiq-school-project.onrender.com/api/auth/login", this.user)
+              const response = await axios.post("http://13.213.49.236/api/auth/login", this.user)
               console.log(response)
               if(response.data.success == false){
                 this.user.password = null
