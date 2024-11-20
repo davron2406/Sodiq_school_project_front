@@ -41,7 +41,7 @@
         methods:{
     
             async login(){
-              const response = await axios.post("http://13.215.190.66/api/auth/login", this.user)
+              const response = await axios.post("//13.215.190.66/api/auth/login", this.user)
               console.log(response)
               if(response.data.success == false){
                 this.user.password = null
